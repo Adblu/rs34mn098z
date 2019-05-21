@@ -1,22 +1,17 @@
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
-from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.preprocessing import LabelEncoder
-from utils import remove_nones
 from sklearn.preprocessing import StandardScaler
+from utils import remove_nones, one_hot_encode_object_array
+from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 
 data = pd.read_excel('dane_oczyszczone.xlsx')
 
 labelencoder = LabelEncoder()
 
-col_list = ['customer_no', 'class', 'channel', 'status', 'emirate', 'code', 'delivery', 'region', 'district',
-            'route', '1re1', 'street', 'bldg', 'landmark']
-
-data.columns = col_list
+data.columns = ['customer_no', 'class', 'channel', 'status', 'emirate', 'code', 'delivery', 'region', 'district',
+                'route', '1re1', 'street', 'bldg', 'landmark']
 
 data = remove_nones(data)
 
@@ -37,19 +32,15 @@ data['landmark'] = labelencoder.fit_transform(data['landmark'].astype(str))
 Y = data.loc[:, data.columns == 'status']
 X = data.loc[:, data.columns != 'status']
 
-sc = StandardScaler()
-X = sc.fit_transform(X)
-
-seed = 823
-test_size = 0.3
+seed = 30
+test_size = 0.5
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=test_size, random_state=seed)
 
-print("training")
-svclassifier = SVC(kernel='poly')
-svclassifier.fit(X_train, y_train)
-y_pred = svclassifier.predict(X_test)
+gnb = GaussianNB()
 
-print(confusion_matrix(y_test, y_pred))
-print(classification_report(y_test, y_pred))
+gnb.fit(X_train, y_train)
 
-print("Accuracy: %.2f%%" % (accuracy_score(y_test, y_pred) * 100))
+# predict(iris.data)
+predicted = gnb.predict(y_test)
+
+print("Accuracy: %.2f%%" % (accuracy_score(y_test, predicted) * 100))
