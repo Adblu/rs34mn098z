@@ -117,3 +117,16 @@ gen
 /ai-dataset.rar
 /ClearDrop.docx
 /ai-dataset.xlsx
+/dane_oczyszczone_50_50_walidacyjne.xlsx
+/dane_oczyszczone_pozostale.xlsx
+/model.py
+/salary.csv
+/request.py
+/classifier_model.pkl
+/dane_oczyszczone_backup.xlsx
+/dane_oczyszczone_walidacyjne.xlsx
+/predict.py
+/predict_xgb.py
+/test.py
+/xgb_model.bst
+/xgb_model.dat

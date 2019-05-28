@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <script language="JavaScript" type="text/javascript" src="static/code.js"></script>
+
+    <title>Heading</title>
+  </head>
+  <body>
+    <br>
+    <!--<a href="index.html"><img class="logo" src="static/final_v1.png" alt=""></a>-->
+    <br>
+    <div class="container main">
+  <div class="jumbotron" id="holder">
+    <h1 class='main_heading'> Customer Status Prediction Demo</h1>
+    <h3>Please enter 12 features listed bellow to see is the customer is active or not.</h3>
+    <br>
+    <div class="instructions">
+      <h2>Instructions: </h2>
+      <p>1. Place each feature corectly in specified fields.</p>
+      <p>2. Press Submit button to see the predicted status.</p>
+    </div>
+    <br>
+    <br>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 1:</label>
+        <div class="col-sm-10">
+          <input  class="form-control" id="feature1" placeholder=" Enter Class" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 2:</label>
+        <div class="col-sm-10">
+          <input  class="form-control" id="feature2" placeholder=" Enter Channel" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 3:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature3" placeholder=" Enter Emirate" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 4:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature4" placeholder=" Enter Code" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 5:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature5" placeholder=" Enter Delivery" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 6:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature6" placeholder=" Enter Region" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 7:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature7" placeholder=" Enter District" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 8:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature8" placeholder=" Enter Route" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 9:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature9" placeholder=" Enter Area" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 10:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature10" placeholder=" Enter Street" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 11:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature11" placeholder=" Enter bldg" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Feature 12:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="feature12" placeholder=" Enter Landmark" >
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button id="submit" type="button" type="button" class="button btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+    <h2 class="result"></h2>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <div class="footer-copyright text-center py-3">
+    <div class="bottom">
+      <p><a href="#">ALM Factory | Status Prediction Demo</a></p>
+    </div>
+  </div>
+
+</footer>
+<!-- Footer -->
+
+
+  </body>
+</html>
