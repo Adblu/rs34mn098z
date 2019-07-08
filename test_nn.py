@@ -15,7 +15,7 @@ X = scaler.transform(X)
 joblib.dump(scaler, "scaler.save")
 Y = one_hot_encode_object_array(Y)
 
-seed = 128
+seed = 129
 test_size = 0.2
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=test_size, random_state=seed)
 X_train, x_val, y_train, y_val = train_test_split(X_train, y_train, test_size=test_size / 2, random_state=seed)
